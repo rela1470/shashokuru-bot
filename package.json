@@ -1,0 +1,26 @@
+{
+  "name": "shashokuru-bot",
+  "version": "1.0.0",
+  "description": "シャショクルの今日のお弁当をSlackに通知します",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rela1470/shashokuru-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rela1470/shashokuru-bot/issues"
+  },
+  "homepage": "https://github.com/rela1470/shashokuru-bot#readme",
+  "dependencies": {
+    "moment": "^2.19.2",
+    "nightmare": "^2.10.0",
+    "request": "^2.83.0",
+    "slack-node": "^0.1.8",
+    "vo": "^4.0.2"
+  }
+}
