@@ -35,7 +35,8 @@ function getItem(nightmare)
                 var data = {};
                 data.image = item.querySelector('img').src;
                 data.price = item.querySelector('p.price').innerHTML.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'');
-                data.name = item.querySelector('p.title').innerHTML;
+                data.name = item.querySelector('p.title').innerHTML.replace('【社食】','');
+                data.store = item.querySelector('p.store').innerHTML;
                 data.url = item.querySelector('a').href;
                 returnArray.push(data);
             }
@@ -57,8 +58,8 @@ function postSlack(message, item)
             attachments: [{
                 image_url: item.image,
                 title_link: item.url,
-                title: item.price + ' ' + item.name,
-                fallback: item.price + ' ' + item.name,
+                title: item.price + ' ' + item.store + ':' + item.name,
+                fallback: item.price + ' ' + item.store + ':' + item.name,
             }]
         }
     }
